@@ -1,137 +1,180 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>TikTok Info – نسخة تجريبية</title>
+<title>Sarah Tallat | Cake Art</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
-    body {
-        background: #0d0d0d;
-        color: #fff;
-        font-family: sans-serif;
-        padding: 20px;
-    }
-    h1 {
-        text-align: center;
-        margin-bottom: 10px;
-        color: #ff2a55;
-    }
-    .box {
-        background: #111;
-        padding: 20px;
-        border-radius: 12px;
-        margin-top: 20px;
-        border: 1px solid #333;
-    }
-    input {
-        width: 100%;
-        padding: 15px;
-        font-size: 18px;
-        border-radius: 10px;
-        border: none;
-        outline: none;
-        margin-bottom: 10px;
-    }
-    button {
-        width: 100%;
-        background: #ff2a55;
-        padding: 15px;
-        font-size: 18px;
-        border: none;
-        border-radius: 10px;
-        color: #fff;
-        cursor: pointer;
-    }
-    button:active {
-        opacity: .7;
-    }
-    .result {
-        white-space: pre-wrap;
-        line-height: 1.8;
-        margin-top: 20px;
-        background: #000;
-        padding: 20px;
-        border-radius: 12px;
-        border: 1px solid #222;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#fffaf7;
+  color:#333;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("Poloty6.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:64px;
+  letter-spacing:2px;
+}
+
+.hero p{
+  margin:20px 0;
+  font-size:20px;
+}
+
+.hero a{
+  display:inline-block;
+  padding:15px 35px;
+  background:#d4a373;
+  color:#fff;
+  border-radius:40px;
+  text-decoration:none;
+  font-size:18px;
+  transition:.3s;
+}
+
+.hero a:hover{
+  background:#b8895b;
+}
+
+/* SECTIONS */
+section{
+  padding:70px 8%;
+}
+
+section h2{
+  text-align:center;
+  font-family:'Playfair Display',serif;
+  font-size:38px;
+  margin-bottom:40px;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:18px;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.gallery img:hover{
+  transform:scale(1.06);
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.light{
+  background:#fdf3ea;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:40px 20px;
+}
+
+footer a{
+  color:#d4a373;
+  font-size:22px;
+  text-decoration:none;
+}
 </style>
 </head>
+
 <body>
 
-<h1>نسخة تجريبية من الذكاء الاصطناعي!</h1>
-
-<div class="box">
-    <input id="user" placeholder="اكتب اليوزر بدون @">
-    <button onclick="showInfo()">عرض المعلومات</button>
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>Sarah Tallat</h1>
+    <p>عالم التورت اللي بيتحول لتحف فنية 🎂✨</p>
+    <a href="tel:01550872032">📞 اطلب تورتك دلوقتي</a>
+  </div>
 </div>
 
-<div id="output" class="result"></div>
+<!-- LATEST -->
+<section>
+  <h2>أحدث التورت</h2>
+  <div class="gallery">
+    <img src="jpg.1767750650772">
+    <img src="jpg.1767750650760">
+    <img src="jpg.1767750650748">
+    <img src="jpg.1767750650737">
+    <img src="jpg.1767750650722">
+  </div>
+</section>
+
+<!-- BEST -->
+<section class="light">
+  <h2>أفضل وأجمل التورت</h2>
+  <div class="gallery">
+    <img src="jpg.1767750650710">
+    <img src="jpg.1767750650697">
+    <img src="jpg.1767750650683">
+    <img src="jpg.1767750650670">
+    <img src="jpg.1767750650652">
+  </div>
+</section>
+
+<!-- ALL CAKES -->
+<section>
+  <h2>معرض التورت</h2>
+  <div class="gallery">
+    <img src="jpg.1767750650625">
+    <img src="jpg.1767750650603">
+    <img src="jpg.1767750650590">
+    <img src="jpg.1767750650578">
+    <img src="jpg.1767750650566">
+    <img src="jpg.1767750650556">
+    <img src="jpg.1767750650541">
+    <img src="jpg.1767750650529">
+    <img src="jpg.1767750650518">
+    <img src="jpg.1767750650508">
+    <img src="jpg.1767750650496">
+    <img src="jpg.1767750650485">
+    <img src="jpg.1767750650474">
+    <img src="jpg.1767750650463">
+    <img src="jpg.1767750650450">
+    <img src="jpg.1767750650439">
+    <img src="jpg.1767750650428">
+  </div>
+</section>
+
+<footer>
+  <p>للطلب أو الاستفسار عن أسعار التورت</p>
+  <a href="tel:01550872032">01550872032</a>
+</footer>
 
 <script>
-function showInfo() {
-    let u = document.getElementById("user").value.trim();
-
-    if(u === "") {
-        document.getElementById("output").innerText = "اكتب يوزر يا عبقري.";
-        return;
-    }
-
-    // بيانات وهمية – تتغير حسب اليوزر عشان تبان حقيقية
-    let fakeID = Math.floor(Math.random() * 999999999999999999);
-    let followers = (Math.random()*10).toFixed(1) + "k";
-    let following = (Math.random()*10).toFixed(1) + "k";
-    let friends = Math.floor(Math.random()*3000);
-    let likes = Math.floor(Math.random()*500);
-    let vids = Math.floor(Math.random()*30);
-
-    let countries = ["مصر 🇪🇬","السعودية 🇸🇦","العراق 🇮🇶","الإمارات 🇦🇪","سوريا 🇸🇾"];
-    let country = countries[Math.floor(Math.random()*countries.length)];
-
-    document.getElementById("output").innerText = 
-`📊 معلومات حساب تيك توك الكامل:
-━━━━━━━━━━━━━━━━
-👤 المعلومات الأساسية:
-- اسم المستخدم : @${u}
-- المعرف : ${fakeID}
-- الاسم : مستخدم تيك توك تجريبي
-- عدد المتابعين : ${followers}
-- يتابع : ${following}
-- الأصدقاء : ${friends}
-- الإعجابات : ${likes}
-- الفيديوهات : ${vids}
-
-🗓️ تواريخ مهمة:
-- تاريخ إنشاء الحساب : 2021-08-03 18:34:59
-- تعديل اسم المستخدم : 1970-01-01 00:00:00
-- تعديل الاسم : 2025-09-27 10:32:38
-
-🌍 الموقع واللغة:
-- الدولة : ${country}
-- اللغة : العربية
-
-🔒 إعدادات الخصوصية:
-- حساب موثّق : لا ❌
-- حساب خاص : لا ❌
-- حساب سري : لا ❌
-- رؤية المتابعين : للجميع 🌍
-- إعدادات الدويتو : للجميع 🌍
-- إعدادات النشر : للجميع 🌍
-- إعدادات التعليقات : للجميع 🌍
-
-🏪 المتاجر والبيع:
-- يوجد متجر : لا ❌
-- يبيع على تيك توك : لا ❌
-
-🏢 نوع الحساب:
-- حساب مؤسسة : لا ❌
-- المفضلة مفتوحة : لا ❌
-
-📝 السيرة الذاتية:
-هذا حساب تجريبي فقط لعرض شكل البيانات.
-
-🌐 رابط الحساب:
-https://tiktok.com/@${u}
-`;
-}
+console.log("Sarah Tallat Website Loaded");
 </script>
 
 </body>
