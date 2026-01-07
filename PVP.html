@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>TikTok Info – نسخة تجريبية</title>
+<style>
+    body {
+        background: #0d0d0d;
+        color: #fff;
+        font-family: sans-serif;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #ff2a55;
+    }
+    .box {
+        background: #111;
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 20px;
+        border: 1px solid #333;
+    }
+    input {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        margin-bottom: 10px;
+    }
+    button {
+        width: 100%;
+        background: #ff2a55;
+        padding: 15px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        cursor: pointer;
+    }
+    button:active {
+        opacity: .7;
+    }
+    .result {
+        white-space: pre-wrap;
+        line-height: 1.8;
+        margin-top: 20px;
+        background: #000;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #222;
+    }
+</style>
+</head>
+<body>
+
+<h1>نسخة تجريبية من الذكاء الاصطناعي!</h1>
+
+<div class="box">
+    <input id="user" placeholder="اكتب اليوزر بدون @">
+    <button onclick="showInfo()">عرض المعلومات</button>
+</div>
+
+<div id="output" class="result"></div>
+
+<script>
+function showInfo() {
+    let u = document.getElementById("user").value.trim();
+
+    if(u === "") {
+        document.getElementById("output").innerText = "اكتب يوزر يا عبقري.";
+        return;
+    }
+
+    // بيانات وهمية – تتغير حسب اليوزر عشان تبان حقيقية
+    let fakeID = Math.floor(Math.random() * 999999999999999999);
+    let followers = (Math.random()*10).toFixed(1) + "k";
+    let following = (Math.random()*10).toFixed(1) + "k";
+    let friends = Math.floor(Math.random()*3000);
+    let likes = Math.floor(Math.random()*500);
+    let vids = Math.floor(Math.random()*30);
+
+    let countries = ["مصر 🇪🇬","السعودية 🇸🇦","العراق 🇮🇶","الإمارات 🇦🇪","سوريا 🇸🇾"];
+    let country = countries[Math.floor(Math.random()*countries.length)];
+
+    document.getElementById("output").innerText = 
+`📊 معلومات حساب تيك توك الكامل:
+━━━━━━━━━━━━━━━━
+👤 المعلومات الأساسية:
+- اسم المستخدم : @${u}
+- المعرف : ${fakeID}
+- الاسم : مستخدم تيك توك تجريبي
+- عدد المتابعين : ${followers}
+- يتابع : ${following}
+- الأصدقاء : ${friends}
+- الإعجابات : ${likes}
+- الفيديوهات : ${vids}
+
+🗓️ تواريخ مهمة:
+- تاريخ إنشاء الحساب : 2021-08-03 18:34:59
+- تعديل اسم المستخدم : 1970-01-01 00:00:00
+- تعديل الاسم : 2025-09-27 10:32:38
+
+🌍 الموقع واللغة:
+- الدولة : ${country}
+- اللغة : العربية
+
+🔒 إعدادات الخصوصية:
+- حساب موثّق : لا ❌
+- حساب خاص : لا ❌
+- حساب سري : لا ❌
+- رؤية المتابعين : للجميع 🌍
+- إعدادات الدويتو : للجميع 🌍
+- إعدادات النشر : للجميع 🌍
+- إعدادات التعليقات : للجميع 🌍
+
+🏪 المتاجر والبيع:
+- يوجد متجر : لا ❌
+- يبيع على تيك توك : لا ❌
+
+🏢 نوع الحساب:
+- حساب مؤسسة : لا ❌
+- المفضلة مفتوحة : لا ❌
+
+📝 السيرة الذاتية:
+هذا حساب تجريبي فقط لعرض شكل البيانات.
+
+🌐 رابط الحساب:
+https://tiktok.com/@${u}
+`;
+}
+</script>
+
+</body>
+</html>
