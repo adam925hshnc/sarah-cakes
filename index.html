@@ -6,34 +6,42 @@
 <title>Sarah Tallat | Cake Art</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <style>
-/* ======= RESET ======= */
+/* ===== RESET ===== */
 * {margin:0;padding:0;box-sizing:border-box;}
-body {font-family:'Poppins',sans-serif; background:#fffaf7; color:#333;}
+body {font-family:'Poppins',sans-serif; background:#f5f2ef; color:#333; scroll-behavior:smooth;}
 a {text-decoration:none;}
 
-/* ======= HERO ======= */
+/* ===== HERO ===== */
 .hero {
   min-height:100vh;
-  background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("Poloty6.jpg") center/cover no-repeat;
-  display:flex; align-items:center; justify-content:center; text-align:center; color:#fff;
-  flex-direction:column;
+  display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
+  background: linear-gradient(135deg, #f2e6d9, #e6dcd2);
+  animation: glow 5s ease-in-out infinite alternate;
 }
-.hero h1 {font-family:'Playfair Display',serif; font-size:64px; letter-spacing:2px; margin-bottom:15px;}
-.hero p {font-size:22px; margin-bottom:25px;}
-.hero a {
-  display:inline-block; padding:15px 35px; background:#d4a373; color:#fff; border-radius:40px; font-size:18px; transition:.3s;
+.hero h1 {font-family:'Playfair Display',serif; font-size:60px; color:#5a3e36; margin-bottom:10px;}
+.hero p {font-size:22px; color:#6b4f3f; margin-bottom:25px;}
+.hero .buttons a {
+  display:inline-block; margin:5px; padding:15px 30px; border-radius:35px;
+  background:#d4a373; color:#fff; font-weight:600; transition:.3s;
 }
-.hero a:hover {background:#b8895b; transform:scale(1.05);}
+.hero .buttons a:hover {background:#b8895b; transform:scale(1.05);}
 
-/* ======= SECTIONS ======= */
+/* ===== ANIMATION ===== */
+@keyframes glow {
+  0% {background: linear-gradient(135deg, #f2e6d9, #e6dcd2);}
+  50% {background: linear-gradient(135deg, #e6dcd2, #f2e6d9);}
+  100% {background: linear-gradient(135deg, #f2e6d9, #e6dcd2);}
+}
+
+/* ===== SECTIONS ===== */
 section {padding:70px 8%;}
-section h2 {text-align:center; font-family:'Playfair Display',serif; font-size:38px; margin-bottom:40px; color:#5a3e36;}
+section h2 {text-align:center; font-family:'Playfair Display',serif; font-size:36px; margin-bottom:40px; color:#5a3e36;}
 
-/* ======= GALLERY ======= */
+/* ===== GALLERY ===== */
 .gallery {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
+  gap:18px;
 }
 .gallery img {
   width:100%;
@@ -42,22 +50,37 @@ section h2 {text-align:center; font-family:'Playfair Display',serif; font-size:3
   transition:.4s;
 }
 .gallery img:hover {
-  transform:scale(1.06);
-  box-shadow:0 20px 40px rgba(0,0,0,.25);
+  transform:scale(1.05);
+  box-shadow:0 15px 35px rgba(0,0,0,.2);
 }
 
-/* ======= LIGHT SECTION ======= */
-.light {background:#fdf3ea;}
+/* ===== BUTTONS UNDER GALLERY ===== */
+.action-buttons {
+  text-align:center;
+  margin-top:40px;
+}
+.action-buttons a {
+  display:inline-block;
+  margin:8px;
+  padding:12px 28px;
+  border-radius:30px;
+  background:#d4a373;
+  color:#fff;
+  font-weight:600;
+  font-size:18px;
+  transition:.3s;
+}
+.action-buttons a:hover {background:#b8895b; transform:scale(1.05);}
 
-/* ======= FOOTER ======= */
+/* ===== FOOTER ===== */
 footer {
-  background:#111;
+  background:#5a3e36;
   color:#fff;
   text-align:center;
   padding:40px 20px;
+  font-size:18px;
 }
-footer a {color:#d4a373; font-size:22px;}
-footer p {margin-bottom:12px; font-size:18px;}
+footer a {color:#f5f2ef; font-weight:600; font-size:20px;}
 </style>
 </head>
 <body>
@@ -66,25 +89,23 @@ footer p {margin-bottom:12px; font-size:18px;}
 <div class="hero">
   <h1>Sarah Tallat</h1>
   <p>تحف التورت اللي بتتحول لفن 🎂✨</p>
-  <a href="tel:01550872032">📞 اطلب تورتك دلوقتي</a>
+  <div class="buttons">
+    <a href="#gallery">معرض الصور</a>
+    <a href="tel:01550872032">📞 اتصل الآن</a>
+    <a href="https://wa.me/201550872032" target="_blank">💬 واتساب</a>
+    <a href="#order">📦 اطلب تورتك</a>
+  </div>
 </div>
 
 <!-- LATEST CAKES -->
-<section>
-  <h2>أحدث التورت</h2>
+<section id="gallery">
+  <h2>معرض الصور</h2>
   <div class="gallery">
     <img src="jpg.1767750650772">
     <img src="jpg.1767750650760">
     <img src="jpg.1767750650748">
     <img src="jpg.1767750650737">
     <img src="jpg.1767750650722">
-  </div>
-</section>
-
-<!-- BEST CAKES -->
-<section class="light">
-  <h2>أفضل وأجمل التورت</h2>
-  <div class="gallery">
     <img src="jpg.1767750650710">
     <img src="jpg.1767750650697">
     <img src="jpg.1767750650683">
@@ -93,41 +114,28 @@ footer p {margin-bottom:12px; font-size:18px;}
   </div>
 </section>
 
-<!-- ALL CAKES -->
-<section>
-  <h2>معرض التورت</h2>
-  <div class="gallery">
-    <img src="jpg.1767750650625">
-    <img src="jpg.1767750650603">
-    <img src="jpg.1767750650590">
-    <img src="jpg.1767750650578">
-    <img src="jpg.1767750650566">
-    <img src="jpg.1767750650556">
-    <img src="jpg.1767750650541">
-    <img src="jpg.1767750650529">
-    <img src="jpg.1767750650518">
-    <img src="jpg.1767750650508">
-    <img src="jpg.1767750650496">
-    <img src="jpg.1767750650485">
-    <img src="jpg.1767750650474">
-    <img src="jpg.1767750650463">
-    <img src="jpg.1767750650450">
-    <img src="jpg.1767750650439">
-    <img src="jpg.1767750650428">
-  </div>
+<!-- ACTION BUTTONS UNDER GALLERY -->
+<div class="action-buttons">
+  <a href="tel:01550872032">📞 اتصل الآن</a>
+  <a href="https://wa.me/201550872032" target="_blank">💬 واتساب</a>
+  <a href="#order">📦 اطلب تورتك</a>
+</div>
+
+<!-- ORDER SECTION -->
+<section id="order">
+  <h2>اطلب تورتك الآن</h2>
+  <p style="text-align:center; font-size:20px;">للطلب والاستفسار عن الأسعار، اتصل أو راسل على واتساب:</p>
+  <p style="text-align:center; font-size:22px; font-weight:bold;"><a href="tel:01550872032">01550872032</a> | <a href="https://wa.me/201550872032" target="_blank">واتساب</a></p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>للطلب أو الاستفسار عن أسعار التورت</p>
-  <a href="tel:01550872032">01550872032</a>
+  &copy; 2026 Sarah Tallat Cakes. جميع الحقوق محفوظة.
 </footer>
 
 <!-- JS -->
 <script>
-console.log("Sarah Tallat Website Loaded");
-
-// اختياري: اضغط على صورة تكبر
+// كود لتكبير الصور عند الضغط
 const images = document.querySelectorAll(".gallery img");
 images.forEach(img => {
   img.addEventListener("click", ()=> {
