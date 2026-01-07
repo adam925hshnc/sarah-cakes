@@ -6,10 +6,7 @@
 <title>Sarah Tallat | Cake Art</title>
 
 <style>
-/* ======== Reset ======== */
 * {margin:0; padding:0; box-sizing:border-box;}
-
-/* ======== Variables ======== */
 :root {
   --light-bg: #f0f0f0;
   --light-text: #2c2c2c;
@@ -19,7 +16,6 @@
   --accent-hover: #b8895b;
 }
 
-/* ======== Body ======== */
 body {
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
@@ -27,14 +23,11 @@ body {
   background: var(--light-bg);
   color: var(--light-text);
 }
-
-/* ======== Dark Mode ======== */
 body.dark-mode {
   background: var(--dark-bg);
   color: var(--dark-text);
 }
 
-/* ======== Toggle Button ======== */
 #toggle-theme {
   position: fixed;
   top: 20px;
@@ -51,7 +44,6 @@ body.dark-mode {
 }
 #toggle-theme:hover { background: var(--accent-hover); }
 
-/* ======== Hero Section ======== */
 .hero {
   text-align: center;
   padding: 60px 20px;
@@ -71,10 +63,7 @@ body.dark-mode {
 }
 .buttons a:hover { background: var(--accent-hover); transform: scale(1.05); }
 
-/* ======== Gallery ======== */
-section {
-  padding:50px 10%;
-}
+section {padding:50px 10%;}
 section h2 {text-align:center; font-size:36px; margin-bottom:40px;}
 .gallery {display:flex; flex-direction:column; gap:30px; align-items:center;}
 .gallery .img-box {
@@ -92,7 +81,6 @@ section h2 {text-align:center; font-size:36px; margin-bottom:40px;}
 }
 .gallery .img-box img:hover { transform:scale(1.05); }
 
-/* ======== Action Buttons ======== */
 .action-buttons {
   text-align:center;
   margin-top:40px;
@@ -110,12 +98,6 @@ section h2 {text-align:center; font-size:36px; margin-bottom:40px;}
 }
 .action-buttons a:hover { background: var(--accent-hover); transform: scale(1.05); }
 
-/* ======== Order Section ======== */
-#order {margin-top:60px; text-align:center;}
-#order p {font-size:20px; margin-bottom:10px;}
-#order a {font-weight:bold; color:var(--accent); font-size:22px; text-decoration:none;}
-
-/* ======== Footer ======== */
 footer {
   background:#5a3e36;
   color:#fff;
@@ -128,10 +110,8 @@ footer a {color:#f5f2ef; font-weight:600;}
 </head>
 <body>
 
-<!-- ======== Dark Mode Toggle ======== -->
 <button id="toggle-theme">تغيير الوضع</button>
 
-<!-- ======== Hero Section ======== -->
 <div class="hero">
   <h1>Sarah Tallat</h1>
   <p>تحف التورت اللي بتتحول لفن 🎂✨</p>
@@ -139,14 +119,13 @@ footer a {color:#f5f2ef; font-weight:600;}
     <a href="#gallery">معرض الصور</a>
     <a href="tel:01550872032">📞 اتصل الآن</a>
     <a href="https://wa.me/201550872032" target="_blank">💬 واتساب</a>
-    <a href="#order">📦 اطلب تورتك</a>
   </div>
 </div>
 
-<!-- ======== Gallery Section ======== -->
 <section id="gallery">
   <h2>معرض الصور</h2>
   <div class="gallery">
+    <!-- الصور القديمة -->
     <div class="img-box"><img src="1767750650428.jpg" alt="Cake"></div>
     <div class="img-box"><img src="1767750650439.jpg" alt="Cake"></div>
     <div class="img-box"><img src="1767750650450.jpg" alt="Cake"></div>
@@ -174,37 +153,47 @@ footer a {color:#f5f2ef; font-weight:600;}
     <div class="img-box"><img src="1767750650748.jpg" alt="Cake"></div>
     <div class="img-box"><img src="1767750650760.jpg" alt="Cake"></div>
     <div class="img-box"><img src="1767750650772.jpg" alt="Cake"></div>
+
+    <!-- الصور الجديدة -->
+    <div class="img-box"><img src="1767756668506.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756668517.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756668529.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756668554.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756668541.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756668567.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756668579.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756668593.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756668605.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756668618.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756796578.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756796590.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756796601.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756796611.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756796623.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756796635.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756796648.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756796659.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756796671.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756796683.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756796694.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756796707.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767756796719.jpg" alt="Cake"></div>
   </div>
 </section>
 
-<!-- ======== Action Buttons ======== -->
 <div class="action-buttons">
   <a href="tel:01550872032">📞 اتصل الآن</a>
   <a href="https://wa.me/201550872032" target="_blank">💬 واتساب</a>
-  <a href="#order">📦 اطلب تورتك</a>
 </div>
 
-<!-- ======== Order Section ======== -->
-<section id="order">
-  <h2>اطلب تورتك الآن</h2>
-  <p>للطلب والاستفسار عن الأسعار، اتصل أو راسل على واتساب:</p>
-  <p><a href="tel:01550872032">01550872032</a> | <a href="https://wa.me/201550872032" target="_blank">واتساب</a></p>
-</section>
-
-<!-- ======== Footer ======== -->
 <footer>
   &copy; 2026 Sarah Tallat Cakes. جميع الحقوق محفوظة.
 </footer>
 
-<!-- ======== Scripts ======== -->
 <script>
-// Toggle Dark Mode
 const toggleBtn = document.getElementById('toggle-theme');
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
+toggleBtn.addEventListener('click', () => { document.body.classList.toggle('dark-mode'); });
 
-// Image popup
 document.querySelectorAll('.gallery img').forEach(img => {
   img.addEventListener('click', () => {
     const src = img.src;
