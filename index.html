@@ -4,86 +4,93 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sarah Tallat | Cake Art</title>
+
 <style>
-/* ======== Reset & Body ======== */
+/* ======== Reset ======== */
 * {margin:0; padding:0; box-sizing:border-box;}
+
+/* ======== Variables ======== */
+:root {
+  --light-bg: #f0f0f0;
+  --light-text: #2c2c2c;
+  --dark-bg: #1e1e1e;
+  --dark-text: #f5f5f5;
+  --accent: #d4a373;
+  --accent-hover: #b8895b;
+}
+
+/* ======== Body ======== */
 body {
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
-  background: linear-gradient(-45deg,#f9d6c1,#ffe3e3,#f9d6c1,#c1f0f0);
-  background-size: 400% 400%;
-  animation: bgAnimation 15s ease infinite;
+  transition: background 0.5s, color 0.5s;
+  background: var(--light-bg);
+  color: var(--light-text);
 }
-@keyframes bgAnimation {
-  0% {background-position:0% 50%;}
-  50% {background-position:100% 50%;}
-  100% {background-position:0% 50%;}
+
+/* ======== Dark Mode ======== */
+body.dark-mode {
+  background: var(--dark-bg);
+  color: var(--dark-text);
 }
+
+/* ======== Toggle Button ======== */
+#toggle-theme {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding:10px 20px;
+  border:none;
+  border-radius:30px;
+  background: var(--accent);
+  color:#fff;
+  cursor:pointer;
+  font-weight:bold;
+  z-index:1000;
+  transition:.3s;
+}
+#toggle-theme:hover { background: var(--accent-hover); }
 
 /* ======== Hero Section ======== */
 .hero {
   text-align: center;
   padding: 60px 20px;
 }
-.hero h1 {
-  font-size: 60px;
-  color: #5a3e36;
-  margin-bottom: 15px;
-}
-.hero p {
-  font-size: 22px;
-  color: #6b4f3f;
-  margin-bottom: 25px;
-}
+.hero h1 {font-size: 60px; margin-bottom:15px;}
+.hero p {font-size:22px; margin-bottom:25px;}
 .buttons a {
   display:inline-block;
   margin:5px;
   padding:15px 30px;
   border-radius:35px;
-  background:#d4a373;
+  background:var(--accent);
   color:#fff;
   font-weight:600;
-  font-size:18px;
   text-decoration:none;
   transition:0.3s;
 }
-.buttons a:hover {
-  background:#b8895b;
-  transform: scale(1.05);
-}
+.buttons a:hover { background: var(--accent-hover); transform: scale(1.05); }
 
-/* ======== Gallery Section ======== */
+/* ======== Gallery ======== */
 section {
   padding:50px 10%;
 }
-section h2 {
-  text-align:center;
-  font-size:36px;
-  margin-bottom:40px;
-  color:#5a3e36;
-}
-.gallery {
-  display:flex;
-  flex-direction:column;
-  gap:30px;
-  align-items:center;
-}
+section h2 {text-align:center; font-size:36px; margin-bottom:40px;}
+.gallery {display:flex; flex-direction:column; gap:30px; align-items:center;}
 .gallery .img-box {
-  width: 90%;
-  max-width: 600px;
-  border-radius: 20px;
+  width:90%;
+  max-width:600px;
+  border-radius:20px;
   overflow:hidden;
   box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 .gallery .img-box img {
   width:100%;
   display:block;
-  transition:0.3s;
   cursor:pointer;
+  transition:0.3s;
 }
-.gallery .img-box img:hover {
-  transform:scale(1.05);
-}
+.gallery .img-box img:hover { transform:scale(1.05); }
 
 /* ======== Action Buttons ======== */
 .action-buttons {
@@ -95,32 +102,18 @@ section h2 {
   margin:8px;
   padding:12px 28px;
   border-radius:30px;
-  background:#d4a373;
+  background:var(--accent);
   color:#fff;
   font-weight:600;
-  font-size:18px;
   text-decoration:none;
   transition:0.3s;
 }
-.action-buttons a:hover {
-  background:#b8895b;
-  transform: scale(1.05);
-}
+.action-buttons a:hover { background: var(--accent-hover); transform: scale(1.05); }
 
 /* ======== Order Section ======== */
-#order {
-  margin-top:60px;
-  text-align:center;
-}
-#order p {
-  font-size:20px;
-  margin-bottom:10px;
-}
-#order a {
-  font-weight:bold;
-  color:#5a3e36;
-  font-size:22px;
-}
+#order {margin-top:60px; text-align:center;}
+#order p {font-size:20px; margin-bottom:10px;}
+#order a {font-weight:bold; color:var(--accent); font-size:22px; text-decoration:none;}
 
 /* ======== Footer ======== */
 footer {
@@ -130,14 +123,13 @@ footer {
   padding:40px 20px;
   font-size:18px;
 }
-footer a {
-  color:#f5f2ef;
-  font-weight:600;
-  font-size:20px;
-}
+footer a {color:#f5f2ef; font-weight:600;}
 </style>
 </head>
 <body>
+
+<!-- ======== Dark Mode Toggle ======== -->
+<button id="toggle-theme">تغيير الوضع</button>
 
 <!-- ======== Hero Section ======== -->
 <div class="hero">
@@ -155,17 +147,33 @@ footer a {
 <section id="gallery">
   <h2>معرض الصور</h2>
   <div class="gallery">
-    <div class="img-box"><img src="1767750650772.jpg" alt="Cake 1"></div>
-    <div class="img-box"><img src="1767750650760.jpg" alt="Cake 2"></div>
-    <div class="img-box"><img src="1767750650748.jpg" alt="Cake 3"></div>
-    <div class="img-box"><img src="1767750650737.jpg" alt="Cake 4"></div>
-    <div class="img-box"><img src="1767750650722.jpg" alt="Cake 5"></div>
-    <div class="img-box"><img src="1767750650710.jpg" alt="Cake 6"></div>
-    <div class="img-box"><img src="1767750650697.jpg" alt="Cake 7"></div>
-    <div class="img-box"><img src="1767750650683.jpg" alt="Cake 8"></div>
-    <div class="img-box"><img src="1767750650670.jpg" alt="Cake 9"></div>
-    <div class="img-box"><img src="1767750650652.jpg" alt="Cake 10"></div>
-    <div class="img-box"><img src="Poloty6.jpg" alt="Cake 11"></div>
+    <div class="img-box"><img src="1767750650428.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650439.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650450.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650463.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650474.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650485.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650496.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650508.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650518.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650529.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650541.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650556.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650566.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650578.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650590.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650603.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650625.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650652.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650670.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650683.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650697.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650710.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650722.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650737.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650748.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650760.jpg" alt="Cake"></div>
+    <div class="img-box"><img src="1767750650772.jpg" alt="Cake"></div>
   </div>
 </section>
 
@@ -188,10 +196,17 @@ footer a {
   &copy; 2026 Sarah Tallat Cakes. جميع الحقوق محفوظة.
 </footer>
 
-<!-- ======== Script for Image Popup ======== -->
+<!-- ======== Scripts ======== -->
 <script>
+// Toggle Dark Mode
+const toggleBtn = document.getElementById('toggle-theme');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+
+// Image popup
 document.querySelectorAll('.gallery img').forEach(img => {
-  img.addEventListener('click', ()=> {
+  img.addEventListener('click', () => {
     const src = img.src;
     const w = window.open("");
     w.document.write(`<img src="${src}" style="width:100%">`);
